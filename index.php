@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="fr-FR" class="no-js">
+
    <head>
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -130,4 +131,5 @@
          })();
       </script>
    </body>
+   
 </html>
