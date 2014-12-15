@@ -389,8 +389,10 @@ transition: background-color 1s ease;
 }
 
 #logo {
-   text-align: center;
-   width: auto;
+  width: 100px; /* largeur en pixel de ta photo */
+  height:75px; /* hauteur en pixel de ta photo */ 
+  float:left;
+
 }
 
 /* ---------- MENU ---------- */

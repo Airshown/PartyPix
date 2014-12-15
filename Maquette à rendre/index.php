@@ -26,6 +26,11 @@
 
    <body>
       <header>
+            <div id="logo">
+               <figure>
+                  <img src="images/logo.png" alt="PartyPix" width="150" height="109" />
+               </figure>
+            </div>
          <!-- <div class="container"> -->
          <div class="main clearfix">
             <nav id="menu" class="nav">
