@@ -21,18 +21,18 @@
                   <span class="icon">
                      <i aria-hidden="true" class="icon-services"></i>
                   </span>
-                  <span>Mes évènements</span>
-               </a>
-            </li>
-            <!-- <li>
-               <a href="#">
-                  <span class="icon">
-                     <i aria-hidden="true" class="icon-portfolio"></i>
-                  </span>
-                  <span>Portfolio</span>
+                  <span>Evènements</span>
                </a>
             </li>
             <li>
+               <a href="calendrier.php">
+                  <span class="icon">
+                     <i aria-hidden="true" class="icon-portfolio"></i>
+                  </span>
+                  <span>Calendrier</span>
+               </a>
+            </li>
+            <!-- <li>
                <a href="#">
                   <span class="icon">
                      <i aria-hidden="true" class="icon-blog"></i>
@@ -45,15 +45,15 @@
                   <span class="icon">
                      <i aria-hidden="true" class="icon-team"></i>
                   </span>
-                  <span>Mon compte</span>
+                  <span>Compte</span>
                </a>
             </li>
             <li>
-               <a href="#">
+               <a href="search.php">
                   <span class="icon">
                      <i aria-hidden="true" class="icon-contact"></i>
                   </span>
-                  <span>Contact</span>
+                  <span>Recherche</span>
                </a>
             </li>
          </ul>
