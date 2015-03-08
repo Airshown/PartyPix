@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 
-<html lang="fr-FR" class="no-js">
+<html lang="fr" class="no-js">
 
    <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
       <title>PartyPix - Accueil</title>
 
@@ -14,26 +15,24 @@
       <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
       <link rel="stylesheet" type="text/css" href="css/bottom-area.css" />
       <link rel="stylesheet" type="text/css" href="css/styles.css" />
+      <link rel="stylesheet" type="text/css" href="css/default.css" />
+      <link rel="stylesheet" type="text/css" href="css/component.css" />
       <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700">
 
+      <script src="js/functions.js"></script>
       <script src="js/modernizr.custom.js"></script>
+
    </head>
 
    <body>
-      <header>
-         <nav role='navigation'>
-            <ul>
-               <li><a class="link-1 entypo-home active" href="index.php"></a></li>
-               <li><a class="link-2 entypo-picture" href="#"></a></li>
-               <li><a class="link-3 entypo-user" href="#"></a></li>
-               <li><a class="link-4 entypo-search" href="#"></a></li>
-            </ul>
-         </nav>
-      </header>
+
+      <?php include 'tpl/header.php'; ?>
 
       <div class="container-image">
 
          <div class="content">
+
+            <h1>Photos récentes :</h1>
 
             <div id="grid" class="grid clearfix">
                <div class="grid__item"><i class="fa fa-fw fa-image"></i></div>
@@ -45,9 +44,9 @@
                <div class="grid__item"><i class="fa fa-fw fa-image"></i></div>
                <div class="grid__item"><i class="fa fa-fw fa-image"></i></div>
                <div class="grid__item"><i class="fa fa-fw fa-image"></i></div>
+               <!-- <div class="grid__item"><i class="fa fa-fw fa-image"></i></div>
                <div class="grid__item"><i class="fa fa-fw fa-image"></i></div>
-               <div class="grid__item"><i class="fa fa-fw fa-image"></i></div>
-               <div class="grid__item"><i class="fa fa-fw fa-image"></i></div>
+               <div class="grid__item"><i class="fa fa-fw fa-image"></i></div> -->
             </div>
             <!-- Related demos -->
             <!-- <section class="related">
@@ -130,6 +129,40 @@
             } );
          })();
       </script>
+
+      <!-- Script Menu -->
+      <script>
+      //  The function to change the class
+      var changeClass = function (r,className1,className2) {
+         var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+         if( regex.test(r.className) ) {
+            r.className = r.className.replace(regex,' '+className2+' ');
+         }
+         else{
+            r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"),' '+className1+' ');
+         }
+         return r.className;
+      };
+
+      //  Creating our button in JS for smaller screens
+      var menuElements = document.getElementById('menu');
+      menuElements.insertAdjacentHTML('afterBegin','<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true"><i aria-hidden="true" class="icon-menu"> </i> Menu</button>');
+
+      //  Toggle the class on click to show / hide the menu
+      document.getElementById('menutoggle').onclick = function() {
+         changeClass(this, 'navtoogle active', 'navtoogle');
+      }
+
+      // http://tympanus.net/codrops/2013/05/08/responsive-retina-ready-menu/comment-page-2/#comment-438918
+      document.onclick = function(e) {
+         var mobileButton = document.getElementById('menutoggle'),
+         buttonStyle =  mobileButton.currentStyle ? mobileButton.currentStyle.display : getComputedStyle(mobileButton, null).display;
+
+         if(buttonStyle === 'block' && e.target !== mobileButton && new RegExp(' ' + 'active' + ' ').test(' ' + mobileButton.className + ' ')) {
+            changeClass(mobileButton, 'navtoogle active', 'navtoogle');
+         }
+      }
+      </script>
    </body>
-   
+
 </html>
